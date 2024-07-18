@@ -115,3 +115,200 @@ x==========x]
 [2024-07-18 23:17:02,297: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
 
 x==========x]
+[2024-07-18 23:40:51,144: INFO: utils: NumExpr defaulting to 8 threads.]
+[2024-07-18 23:40:51,420: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-07-18 23:40:51,421: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-07-18 23:40:51,423: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-18 23:40:51,423: INFO: common: created directory at: artifacts]
+[2024-07-18 23:40:51,423: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-07-18 23:40:51,423: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1CGBEGKaOaawXtvkI_C3cMwniKJGN-FLM/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-07-18 23:42:03,334: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1CGBEGKaOaawXtvkI_C3cMwniKJGN-FLM/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-07-18 23:42:09,168: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-07-18 23:42:09,168: INFO: main: *******************]
+[2024-07-18 23:42:09,169: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-07-18 23:42:09,170: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-07-18 23:42:09,171: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-18 23:42:09,172: INFO: common: created directory at: artifacts]
+[2024-07-18 23:42:09,173: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-07-18 23:42:09,504: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-07-18 23:42:09,570: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-07-18 23:42:09,613: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-07-18 23:42:09,613: INFO: main: *******************]
+[2024-07-18 23:42:09,613: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-07-18 23:42:09,613: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-07-18 23:42:09,614: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-18 23:42:09,614: INFO: common: created directory at: artifacts]
+[2024-07-18 23:42:09,614: INFO: common: created directory at: artifacts/training]
+[2024-07-18 23:42:09,681: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-07-18 23:42:10,432: ERROR: main: Unknown variable: <KerasVariable shape=(25088, 2), dtype=float32, path=dense/kernel>. This optimizer can only be called for the variables it was originally built with. When working with a new set of variables, you should recreate a new optimizer instance.]
+Traceback (most recent call last):
+  File "/Users/sairoopesh/Documents/projects/KidneyDiseaseClassification/main.py", line 32, in <module>
+    model_trainer.main()
+  File "/Users/sairoopesh/Documents/projects/KidneyDiseaseClassification/src/cnnClassifier/pipeline/stage_03_model_training.py", line 18, in main
+    training.train()
+  File "/Users/sairoopesh/Documents/projects/KidneyDiseaseClassification/src/cnnClassifier/components/model_training.py", line 68, in train
+    self.model.fit(
+  File "/opt/anaconda3/lib/python3.12/site-packages/keras/src/utils/traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/opt/anaconda3/lib/python3.12/site-packages/keras/src/optimizers/base_optimizer.py", line 228, in _check_variables_are_known
+    raise ValueError(
+ValueError: Unknown variable: <KerasVariable shape=(25088, 2), dtype=float32, path=dense/kernel>. This optimizer can only be called for the variables it was originally built with. When working with a new set of variables, you should recreate a new optimizer instance.
+[2024-07-18 23:44:17,612: INFO: utils: NumExpr defaulting to 8 threads.]
+[2024-07-18 23:44:17,826: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-07-18 23:44:17,827: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-07-18 23:44:17,830: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-18 23:44:17,830: INFO: common: created directory at: artifacts]
+[2024-07-18 23:44:17,830: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-07-18 23:44:17,830: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1CGBEGKaOaawXtvkI_C3cMwniKJGN-FLM/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-07-18 23:45:25,592: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1CGBEGKaOaawXtvkI_C3cMwniKJGN-FLM/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-07-18 23:45:31,669: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-07-18 23:45:31,670: INFO: main: *******************]
+[2024-07-18 23:45:31,670: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-07-18 23:45:31,671: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-07-18 23:45:31,673: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-18 23:45:31,674: INFO: common: created directory at: artifacts]
+[2024-07-18 23:45:31,674: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-07-18 23:45:32,016: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-07-18 23:45:32,109: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-07-18 23:45:32,168: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-07-18 23:45:32,168: INFO: main: *******************]
+[2024-07-18 23:45:32,168: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-07-18 23:45:32,169: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-07-18 23:45:32,169: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-18 23:45:32,169: INFO: common: created directory at: artifacts]
+[2024-07-18 23:45:32,169: INFO: common: created directory at: artifacts/training]
+[2024-07-18 23:45:32,240: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-07-18 23:45:32,990: ERROR: main: Unknown variable: <KerasVariable shape=(25088, 2), dtype=float32, path=dense/kernel>. This optimizer can only be called for the variables it was originally built with. When working with a new set of variables, you should recreate a new optimizer instance.]
+Traceback (most recent call last):
+  File "/Users/sairoopesh/Documents/projects/KidneyDiseaseClassification/main.py", line 32, in <module>
+    model_trainer.main()
+  File "/Users/sairoopesh/Documents/projects/KidneyDiseaseClassification/src/cnnClassifier/pipeline/stage_03_model_training.py", line 18, in main
+    training.train()
+  File "/Users/sairoopesh/Documents/projects/KidneyDiseaseClassification/src/cnnClassifier/components/model_training.py", line 71, in train
+    self.model.fit(
+  File "/opt/anaconda3/lib/python3.12/site-packages/keras/src/utils/traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/opt/anaconda3/lib/python3.12/site-packages/keras/src/optimizers/base_optimizer.py", line 228, in _check_variables_are_known
+    raise ValueError(
+ValueError: Unknown variable: <KerasVariable shape=(25088, 2), dtype=float32, path=dense/kernel>. This optimizer can only be called for the variables it was originally built with. When working with a new set of variables, you should recreate a new optimizer instance.
+[2024-07-18 23:53:20,283: INFO: utils: NumExpr defaulting to 8 threads.]
+[2024-07-18 23:53:20,484: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-07-18 23:53:20,485: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-07-18 23:53:20,487: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-18 23:53:20,487: INFO: common: created directory at: artifacts]
+[2024-07-18 23:53:20,487: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-07-18 23:53:20,487: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1CGBEGKaOaawXtvkI_C3cMwniKJGN-FLM/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-07-18 23:54:29,135: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1CGBEGKaOaawXtvkI_C3cMwniKJGN-FLM/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-07-18 23:54:35,016: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-07-18 23:54:35,017: INFO: main: *******************]
+[2024-07-18 23:54:35,017: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-07-18 23:54:35,018: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-07-18 23:54:35,019: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-18 23:54:35,020: INFO: common: created directory at: artifacts]
+[2024-07-18 23:54:35,020: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-07-18 23:54:35,288: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-07-18 23:54:35,369: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-07-18 23:54:35,424: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-07-18 23:54:35,424: INFO: main: *******************]
+[2024-07-18 23:54:35,424: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-07-18 23:54:35,425: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-07-18 23:54:35,425: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-18 23:54:35,425: INFO: common: created directory at: artifacts]
+[2024-07-18 23:54:35,426: INFO: common: created directory at: artifacts/training]
+[2024-07-18 23:54:35,494: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-07-18 23:54:36,135: ERROR: main: Unknown variable: <KerasVariable shape=(25088, 2), dtype=float32, path=dense/kernel>. This optimizer can only be called for the variables it was originally built with. When working with a new set of variables, you should recreate a new optimizer instance.]
+Traceback (most recent call last):
+  File "/Users/sairoopesh/Documents/projects/KidneyDiseaseClassification/main.py", line 32, in <module>
+    model_trainer.main()
+  File "/Users/sairoopesh/Documents/projects/KidneyDiseaseClassification/src/cnnClassifier/pipeline/stage_03_model_training.py", line 18, in main
+    training.train()
+  File "/Users/sairoopesh/Documents/projects/KidneyDiseaseClassification/src/cnnClassifier/components/model_training.py", line 69, in train
+    self.model.fit(
+  File "/opt/anaconda3/lib/python3.12/site-packages/keras/src/utils/traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/opt/anaconda3/lib/python3.12/site-packages/keras/src/optimizers/base_optimizer.py", line 228, in _check_variables_are_known
+    raise ValueError(
+ValueError: Unknown variable: <KerasVariable shape=(25088, 2), dtype=float32, path=dense/kernel>. This optimizer can only be called for the variables it was originally built with. When working with a new set of variables, you should recreate a new optimizer instance.
+[2024-07-19 00:04:25,223: INFO: utils: NumExpr defaulting to 8 threads.]
+[2024-07-19 00:04:25,481: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-07-19 00:04:25,482: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-07-19 00:04:25,483: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-19 00:04:25,484: INFO: common: created directory at: artifacts]
+[2024-07-19 00:04:25,484: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-07-19 00:04:25,484: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1CGBEGKaOaawXtvkI_C3cMwniKJGN-FLM/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-07-19 00:05:34,786: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1CGBEGKaOaawXtvkI_C3cMwniKJGN-FLM/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-07-19 00:05:40,453: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-07-19 00:05:40,453: INFO: main: *******************]
+[2024-07-19 00:05:40,453: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-07-19 00:05:40,454: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-07-19 00:05:40,456: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-19 00:05:40,457: INFO: common: created directory at: artifacts]
+[2024-07-19 00:05:40,457: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-07-19 00:05:40,786: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-07-19 00:05:40,859: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-07-19 00:05:40,924: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-07-19 00:05:40,924: INFO: main: *******************]
+[2024-07-19 00:05:40,924: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-07-19 00:05:40,925: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-07-19 00:05:40,926: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-19 00:05:40,926: INFO: common: created directory at: artifacts]
+[2024-07-19 00:05:40,926: INFO: common: created directory at: artifacts/training]
+[2024-07-19 00:05:40,995: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-07-19 00:05:41,754: ERROR: main: Unknown variable: <KerasVariable shape=(25088, 2), dtype=float32, path=dense/kernel>. This optimizer can only be called for the variables it was originally built with. When working with a new set of variables, you should recreate a new optimizer instance.]
+Traceback (most recent call last):
+  File "/Users/sairoopesh/Documents/projects/KidneyDiseaseClassification/main.py", line 32, in <module>
+    model_trainer.main()
+  File "/Users/sairoopesh/Documents/projects/KidneyDiseaseClassification/src/cnnClassifier/pipeline/stage_03_model_training.py", line 18, in main
+    training.train()
+  File "/Users/sairoopesh/Documents/projects/KidneyDiseaseClassification/src/cnnClassifier/components/model_training.py", line 71, in train
+    self.model.fit(
+  File "/opt/anaconda3/lib/python3.12/site-packages/keras/src/utils/traceback_utils.py", line 122, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "/opt/anaconda3/lib/python3.12/site-packages/keras/src/optimizers/base_optimizer.py", line 228, in _check_variables_are_known
+    raise ValueError(
+ValueError: Unknown variable: <KerasVariable shape=(25088, 2), dtype=float32, path=dense/kernel>. This optimizer can only be called for the variables it was originally built with. When working with a new set of variables, you should recreate a new optimizer instance.
+[2024-07-19 00:16:09,128: INFO: utils: NumExpr defaulting to 8 threads.]
+[2024-07-19 00:16:09,388: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-07-19 00:16:09,389: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-07-19 00:16:09,391: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-19 00:16:09,391: INFO: common: created directory at: artifacts]
+[2024-07-19 00:16:09,391: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-07-19 00:16:09,391: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1CGBEGKaOaawXtvkI_C3cMwniKJGN-FLM/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-07-19 00:17:19,607: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1CGBEGKaOaawXtvkI_C3cMwniKJGN-FLM/view?usp=drive_link into file artifacts/data_ingestion/data.zip]
+[2024-07-19 00:17:25,352: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2024-07-19 00:17:25,352: INFO: main: *******************]
+[2024-07-19 00:17:25,352: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-07-19 00:17:25,353: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-07-19 00:17:25,355: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-19 00:17:25,356: INFO: common: created directory at: artifacts]
+[2024-07-19 00:17:25,356: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-07-19 00:17:25,674: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-07-19 00:17:25,735: WARNING: saving_api: You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. ]
+[2024-07-19 00:17:25,784: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-07-19 00:17:25,784: INFO: main: *******************]
+[2024-07-19 00:17:25,784: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-07-19 00:17:25,785: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-07-19 00:17:25,785: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-19 00:17:25,785: INFO: common: created directory at: artifacts]
+[2024-07-19 00:17:25,785: INFO: common: created directory at: artifacts/training]
+[2024-07-19 00:17:25,857: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
